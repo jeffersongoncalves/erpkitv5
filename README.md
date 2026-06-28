@@ -39,7 +39,7 @@ Each guard has its own password-reset broker.
 - **Three panels, two guards** — Admin (`/admin`), App (`/app`) and Guest (`/`) following the FilaKit pattern
 - **Full ERP on the admin panel** — `ErpPanelPlugin` registers all 13 ERP modules (80+ resources) under the `admin` guard
 - **13 ERP modules** — accounting, stock, selling, buying, manufacturing, assets, subcontracting, CRM, projects, support, quality, maintenance, on top of the core master-data foundation
-- **130+ `erp_*` tables** — the full ERPNext-native schema, published from the module packages and migrated into your database
+- **130+ `erp_*` tables** — the full ERP schema, published from the module packages and migrated into your database
 - **First-party Filament plugins** — Logo, Edit Profile, PWA, Log Viewer, Developer Logins, Impersonate, Additional Information, Sensible Defaults
 - **Demo seeder** — seeds an Admin and a User login plus a company, USD currency, an 8-account chart of accounts, a warehouse, items, a price list, a customer and a supplier (idempotent)
 
