@@ -2,23 +2,32 @@
 
 namespace App\Providers\Filament;
 
+use AchyutN\FilamentLogViewer\FilamentLogViewer;
+use App\Filament\Admin\Pages\Auth\Login;
+use App\Models\Admin;
+use DutchCodingCompany\FilamentDeveloperLogins\FilamentDeveloperLoginsPlugin;
+use Filament\Actions\Action;
+use Filament\Enums\ThemeMode;
 use Filament\Http\Middleware\Authenticate;
 use Filament\Http\Middleware\AuthenticateSession;
 use Filament\Http\Middleware\DisableBladeIconComponents;
 use Filament\Http\Middleware\DispatchServingFilamentEvent;
-use Filament\Pages\Dashboard;
+use Filament\Pages;
 use Filament\Panel;
 use Filament\PanelProvider;
 use Filament\Support\Colors\Color;
-use Filament\Widgets\AccountWidget;
-use Filament\Widgets\FilamentInfoWidget;
+use Filament\Widgets;
 use Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse;
 use Illuminate\Cookie\Middleware\EncryptCookies;
-use Illuminate\Foundation\Http\Middleware\PreventRequestForgery;
+use Illuminate\Foundation\Http\Middleware\VerifyCsrfToken;
 use Illuminate\Routing\Middleware\SubstituteBindings;
 use Illuminate\Session\Middleware\StartSession;
+use Illuminate\Support\Facades\Vite;
 use Illuminate\View\Middleware\ShareErrorsFromSession;
+use JeffersonGoncalves\Filament\Pwa\FilamentPwaPlugin;
 use JeffersonGoncalves\FilamentErp\Umbrella\ErpPanelPlugin;
+use Joaopaulolndev\FilamentEditProfile\FilamentEditProfilePlugin;
+use Joaopaulolndev\FilamentEditProfile\Pages\EditProfilePage;
 
 class AdminPanelProvider extends PanelProvider
 {
@@ -28,34 +37,84 @@ class AdminPanelProvider extends PanelProvider
             ->default()
             ->id('admin')
             ->path('admin')
-            ->login()
+            ->login(Login::class)
+            ->authGuard('admin')
             ->colors([
                 'primary' => Color::Amber,
             ])
-            ->discoverResources(in: app_path('Filament/Resources'), for: 'App\Filament\Resources')
-            ->discoverPages(in: app_path('Filament/Pages'), for: 'App\Filament\Pages')
+            ->brandLogo(fn () => Vite::asset(config('erpkit.logo')))
+            ->brandLogoHeight(fn () => request()->is('admin/login', 'admin/password-reset/*') ? '121px' : '50px')
+            ->viteTheme('resources/css/filament/admin/theme.css')
+            ->defaultThemeMode(config('erpkit.theme_mode', ThemeMode::Dark))
+            ->discoverClusters(in: app_path('Filament/Admin/Clusters'), for: 'App\\Filament\\Admin\\Clusters')
+            ->discoverPages(in: app_path('Filament/Admin/Pages'), for: 'App\\Filament\\Admin\\Pages')
+            ->discoverResources(in: app_path('Filament/Admin/Resources'), for: 'App\\Filament\\Admin\\Resources')
+            ->discoverWidgets(in: app_path('Filament/Admin/Widgets'), for: 'App\\Filament\\Admin\\Widgets')
             ->pages([
-                Dashboard::class,
+                Pages\Dashboard::class,
             ])
-            ->discoverWidgets(in: app_path('Filament/Widgets'), for: 'App\Filament\Widgets')
             ->widgets([
-                AccountWidget::class,
-                FilamentInfoWidget::class,
+                Widgets\AccountWidget::class,
+                Widgets\FilamentInfoWidget::class,
             ])
-            ->plugin(ErpPanelPlugin::make())
             ->middleware([
                 EncryptCookies::class,
                 AddQueuedCookiesToResponse::class,
                 StartSession::class,
                 AuthenticateSession::class,
                 ShareErrorsFromSession::class,
-                PreventRequestForgery::class,
+                VerifyCsrfToken::class,
                 SubstituteBindings::class,
                 DisableBladeIconComponents::class,
                 DispatchServingFilamentEvent::class,
             ])
             ->authMiddleware([
                 Authenticate::class,
-            ]);
+            ])
+            ->navigationGroups([
+                __('User'),
+                __('Management'),
+                __('Settings'),
+            ])
+            ->plugins([
+                ErpPanelPlugin::make(),
+                FilamentPwaPlugin::make(),
+                FilamentDeveloperLoginsPlugin::make()
+                    ->enabled(fn () => app()->environment('local'))
+                    ->modelClass(Admin::class)
+                    ->users(fn () => Admin::query()->where('status', true)->pluck('email', 'name')->toArray()),
+                FilamentLogViewer::make()
+                    ->navigationGroup(__('Settings')),
+                FilamentEditProfilePlugin::make()
+                    ->slug('my-profile')
+                    ->setTitle(__('My Profile'))
+                    ->setNavigationLabel(__('My Profile'))
+                    ->setNavigationGroup(__('Group Profile'))
+                    ->setIcon('heroicon-o-user')
+                    ->setSort(10)
+                    ->shouldRegisterNavigation(false)
+                    ->shouldShowEmailForm()
+                    ->shouldShowLocaleForm(options: [
+                        'pt_BR' => __('🇧🇷 Português'),
+                        'en' => __('🇺🇸 Inglês'),
+                        'es' => __('🇪🇸 Espanhol'),
+                    ])
+                    ->shouldShowThemeColorForm()
+                    ->shouldShowSanctumTokens()
+                    ->shouldShowMultiFactorAuthentication()
+                    ->shouldShowBrowserSessionsForm()
+                    ->shouldShowAvatarForm(),
+            ])
+            ->userMenuItems([
+                'profile' => Action::make('profile')
+                    ->label(fn (): string => __('My Profile'))
+                    ->url(fn (): string => EditProfilePage::getUrl())
+                    ->icon('heroicon-m-user-circle'),
+            ])
+            ->unsavedChangesAlerts()
+            ->passwordReset()
+            ->profile()
+            ->databaseNotifications()
+            ->databaseNotificationsPolling('30s');
     }
 }

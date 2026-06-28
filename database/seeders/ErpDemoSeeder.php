@@ -2,9 +2,7 @@
 
 namespace Database\Seeders;
 
-use App\Models\User;
 use Illuminate\Database\Seeder;
-use Illuminate\Support\Facades\Hash;
 use JeffersonGoncalves\Erp\Accounting\Enums\AccountType;
 use JeffersonGoncalves\Erp\Accounting\Enums\RootType;
 use JeffersonGoncalves\Erp\Accounting\Models\Account;
@@ -19,8 +17,9 @@ use JeffersonGoncalves\Erp\Stock\Models\Warehouse;
 
 /**
  * Builds a minimal but coherent ERP demo dataset:
- * an admin user, a company + USD currency, a small chart of accounts,
+ * a company + USD currency, a small chart of accounts,
  * a warehouse, items, a price list, a customer and a supplier.
+ * (Authentication accounts are seeded by DatabaseSeeder.)
  *
  * Idempotent: safe to run repeatedly (keyed on natural unique columns).
  */
@@ -28,12 +27,6 @@ class ErpDemoSeeder extends Seeder
 {
     public function run(): void
     {
-        // --- Filament admin user -------------------------------------------
-        User::query()->updateOrCreate(
-            ['email' => 'admin@erpkit.test'],
-            ['name' => 'ERPKit Admin', 'password' => Hash::make('password')],
-        );
-
         // --- Currency + Company --------------------------------------------
         Currency::query()->firstOrCreate(
             ['code' => 'USD'],

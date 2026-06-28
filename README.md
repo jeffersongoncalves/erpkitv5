@@ -6,17 +6,42 @@
 
 # ERPKit v5
 
-A full ERP, ready to run — a Laravel 13 + Filament v5 starter application wired to the `jeffersongoncalves/filament-erp` ecosystem.
+A full ERP, ready to run — a Laravel 13 + Filament v5 starter application with a multi-panel,
+multi-guard architecture and the entire `jeffersongoncalves/filament-erp` ecosystem wired into its
+admin panel.
 
-ERPKit v5 is a ready-to-run starter app that bundles the entire Laravel ERP ecosystem behind a single admin panel. The umbrella `jeffersongoncalves/filament-erp` plugin registers all 13 ERP modules, and a demo seeder lays down a coherent starting dataset so you can log in and explore a working ERP in minutes.
+ERPKit v5 follows the FilaKit multi-panel pattern: three Filament panels backed by two authentication
+guards. The umbrella `jeffersongoncalves/filament-erp` plugin registers all 13 ERP modules on the
+**admin** panel, and a demo seeder lays down a coherent starting dataset so you can log in and explore
+a working ERP in minutes.
+
+## Architecture
+
+### Panels
+
+| Panel | Path | Guard | Provider | Purpose |
+|-------|------|-------|----------|---------|
+| **Admin** | `/admin` | `admin` | `admins` | Management back office — the full 13-module ERP plus Admin/User management |
+| **App**   | `/app`  | `web`   | `users`  | End-user self-service — dashboard and profile |
+| **Guest** | `/`     | _(public)_ | — | Public landing pages |
+
+### Guards
+
+Two session guards are configured in `config/auth.php`:
+
+- `admin` → `admins` provider → `App\Models\Admin` (table `admins`)
+- `web` → `users` provider → `App\Models\User` (table `users`)
+
+Each guard has its own password-reset broker.
 
 ## Features
 
-- **One admin panel** — Filament v5 panel at `/admin` with the `ErpPanelPlugin` registering all 13 ERP modules
+- **Three panels, two guards** — Admin (`/admin`), App (`/app`) and Guest (`/`) following the FilaKit pattern
+- **Full ERP on the admin panel** — `ErpPanelPlugin` registers all 13 ERP modules (80+ resources) under the `admin` guard
 - **13 ERP modules** — accounting, stock, selling, buying, manufacturing, assets, subcontracting, CRM, projects, support, quality, maintenance, on top of the core master-data foundation
 - **130+ `erp_*` tables** — the full ERPNext-native schema, published from the module packages and migrated into your database
-- **Demo data seeder** — `ErpDemoSeeder` builds an admin user, a company + USD currency, a small chart of accounts, a warehouse, items, a price list, a customer and a supplier (idempotent, safe to re-run)
-- **Admin authentication** — login out of the box with a demo account
+- **First-party Filament plugins** — Logo, Edit Profile, PWA, Log Viewer, Developer Logins, Impersonate, Additional Information, Sensible Defaults
+- **Demo seeder** — seeds an Admin and a User login plus a company, USD currency, an 8-account chart of accounts, a warehouse, items, a price list, a customer and a supplier (idempotent)
 
 ## Requirements
 
@@ -35,36 +60,43 @@ php artisan key:generate
 touch database/database.sqlite
 ```
 
-The ERP module migrations are **publish-only** — publish each module's migrations into `database/migrations`, then migrate:
+The ERP module migrations are **publish-only** — publish each module's migrations into
+`database/migrations`, then migrate. A convenience composer script publishes all 13 at once:
 
 ```bash
-php artisan vendor:publish --tag="erp-core-migrations"
-php artisan vendor:publish --tag="erp-accounting-migrations"
-php artisan vendor:publish --tag="erp-stock-migrations"
-php artisan vendor:publish --tag="erp-selling-migrations"
-php artisan vendor:publish --tag="erp-buying-migrations"
-php artisan vendor:publish --tag="erp-manufacturing-migrations"
-php artisan vendor:publish --tag="erp-assets-migrations"
-php artisan vendor:publish --tag="erp-subcontracting-migrations"
-php artisan vendor:publish --tag="erp-crm-migrations"
-php artisan vendor:publish --tag="erp-projects-migrations"
-php artisan vendor:publish --tag="erp-support-migrations"
-php artisan vendor:publish --tag="erp-quality-migrations"
-php artisan vendor:publish --tag="erp-maintenance-migrations"
+composer publish-erp
+# ...or publish them individually:
+# php artisan vendor:publish --tag="erp-core-migrations"
+# php artisan vendor:publish --tag="erp-accounting-migrations"
+# php artisan vendor:publish --tag="erp-stock-migrations"
+# php artisan vendor:publish --tag="erp-selling-migrations"
+# php artisan vendor:publish --tag="erp-buying-migrations"
+# php artisan vendor:publish --tag="erp-manufacturing-migrations"
+# php artisan vendor:publish --tag="erp-assets-migrations"
+# php artisan vendor:publish --tag="erp-subcontracting-migrations"
+# php artisan vendor:publish --tag="erp-crm-migrations"
+# php artisan vendor:publish --tag="erp-projects-migrations"
+# php artisan vendor:publish --tag="erp-support-migrations"
+# php artisan vendor:publish --tag="erp-quality-migrations"
+# php artisan vendor:publish --tag="erp-maintenance-migrations"
 
 php artisan migrate
 php artisan db:seed
 php artisan serve
 ```
 
-Visit [http://localhost:8000/admin](http://localhost:8000/admin) and sign in with the demo account:
+## Demo logins
 
-- **Email:** `admin@erpkit.test`
-- **Password:** `password`
+| Panel | URL | Email | Password |
+|-------|-----|-------|----------|
+| Admin | [http://localhost:8000/admin](http://localhost:8000/admin) | `admin@erpkit.test` | `password` |
+| App   | [http://localhost:8000/app](http://localhost:8000/app)     | `user@erpkit.test`  | `password` |
 
-## What's included
+The Guest panel is served at [http://localhost:8000/](http://localhost:8000/).
 
-The umbrella plugin registers these 13 modules on the panel:
+## What's included on the admin panel
+
+The umbrella plugin registers these 13 modules:
 
 | Module | Covers |
 |--------|--------|
@@ -82,7 +114,9 @@ The umbrella plugin registers these 13 modules on the panel:
 | **Quality** | Inspections, quality goals, procedures |
 | **Maintenance** | Maintenance schedules and visits |
 
-Each module can be toggled via `config/filament-erp.php` or the plugin's `exceptModules()` / `modules()` methods — see the [`jeffersongoncalves/filament-erp`](https://github.com/jeffersongoncalves/filament-erp) documentation.
+Each module can be toggled via `config/filament-erp.php` or the plugin's `exceptModules()` / `modules()`
+methods — see the [`jeffersongoncalves/filament-erp`](https://github.com/jeffersongoncalves/filament-erp)
+documentation.
 
 ## Credits
 

@@ -13,6 +13,7 @@
 /.vscode
 /.zed
 /auth.json
+/build
 /database/*.sqlite
 /database/*.sqlite-journal
 /node_modules
@@ -24,7 +25,9 @@
 /storage/pail
 /vendor
 _ide_helper.php
+.phpstorm.meta.php
 Homestead.json
 Homestead.yaml
+phpstan.neon
 Thumbs.db
 art/*.svg

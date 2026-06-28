@@ -1,7 +1,8 @@
 <?php
 
+use App\Models\Admin;
 use App\Models\User;
-use Database\Seeders\ErpDemoSeeder;
+use Database\Seeders\DatabaseSeeder;
 use JeffersonGoncalves\Erp\Accounting\Enums\AccountType;
 use JeffersonGoncalves\Erp\Accounting\Models\Account;
 use JeffersonGoncalves\Erp\Accounting\Models\GlEntry;
@@ -11,18 +12,33 @@ use JeffersonGoncalves\Erp\Core\Models\Company;
 use JeffersonGoncalves\Erp\Selling\Models\Customer;
 
 beforeEach(function () {
-    $this->seed(ErpDemoSeeder::class);
-    $this->admin = User::where('email', 'admin@erpkit.test')->firstOrFail();
+    $this->seed(DatabaseSeeder::class);
+    $this->admin = Admin::where('email', 'admin@erpkit.test')->firstOrFail();
+    $this->user = User::where('email', 'user@erpkit.test')->firstOrFail();
 });
 
-it('seeds a coherent demo dataset', function () {
-    expect(Company::count())->toBe(1)
+it('seeds both guards and a coherent ERP demo dataset', function () {
+    expect(Admin::count())->toBe(1)
+        ->and(User::count())->toBe(1)
+        ->and(Company::count())->toBe(1)
         ->and(Account::count())->toBe(8)
         ->and(Customer::count())->toBe(1);
 });
 
-it('renders the core Filament list pages for an authenticated admin', function (string $route) {
-    $this->actingAs($this->admin)
+it('lets an Admin reach the admin panel dashboard', function () {
+    $this->actingAs($this->admin, 'admin')
+        ->get('/admin')
+        ->assertSuccessful();
+});
+
+it('lets a User reach the app panel dashboard', function () {
+    $this->actingAs($this->user, 'web')
+        ->get('/app')
+        ->assertSuccessful();
+});
+
+it('renders the core ERP Filament list pages for an authenticated admin', function (string $route) {
+    $this->actingAs($this->admin, 'admin')
         ->get(route($route))
         ->assertOk();
 })->with([
