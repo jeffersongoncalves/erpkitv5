@@ -1,0 +1,71 @@
+name: Auto Release on Filament Update
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - composer.lock
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  auto-release:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+
+      - name: Extract Filament version from current code
+        id: current
+        run: |
+          VERSION=$(jq -r '.packages[] | select(.name == "filament/filament") | .version' composer.lock)
+          # Strip 'v' prefix to match tag format
+          echo "version=${VERSION#v}" >> $GITHUB_OUTPUT
+
+      - name: Get latest tag and its Filament version
+        id: previous
+        run: |
+          LATEST_TAG=$(git describe --tags --abbrev=0 2>/dev/null || echo "")
+          if [ -z "$LATEST_TAG" ]; then
+            echo "No existing tags found"
+            echo "tag=" >> $GITHUB_OUTPUT
+            echo "version=" >> $GITHUB_OUTPUT
+            exit 0
+          fi
+
+          echo "tag=$LATEST_TAG" >> $GITHUB_OUTPUT
+
+          TAG_VERSION=$(git show "$LATEST_TAG":composer.lock | jq -r '.packages[] | select(.name == "filament/filament") | .version')
+          echo "version=${TAG_VERSION#v}" >> $GITHUB_OUTPUT
+
+      - name: Check if Filament was updated since last release
+        id: check
+        run: |
+          echo "Current Filament: ${{ steps.current.outputs.version }}"
+          echo "Latest tag: ${{ steps.previous.outputs.tag }} (Filament: ${{ steps.previous.outputs.version }})"
+
+          if [ -z "${{ steps.previous.outputs.tag }}" ]; then
+            echo "First release - no previous tags found"
+            echo "updated=true" >> $GITHUB_OUTPUT
+          elif [ "${{ steps.current.outputs.version }}" != "${{ steps.previous.outputs.version }}" ] && [ -n "${{ steps.previous.outputs.version }}" ]; then
+            echo "updated=true" >> $GITHUB_OUTPUT
+          else
+            echo "updated=false" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Create GitHub Release
+        if: steps.check.outputs.updated == 'true'
+        run: |
+          gh release create "${{ steps.current.outputs.version }}" \
+            --target main \
+            --title "${{ steps.current.outputs.version }}" \
+            --notes "Bump Filament to v${{ steps.current.outputs.version }}"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
