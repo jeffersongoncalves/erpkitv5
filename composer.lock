@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c21e942545c6a0c1e434a46c11e0d87b",
+    "content-hash": "2b9a25651b7d5b1feb14b8128c4b0f1b",
     "packages": [
         {
             "name": "achyutn/filament-log-viewer",
@@ -1698,16 +1698,16 @@
         },
         {
             "name": "guzzlehttp/guzzle",
-            "version": "7.13.0",
+            "version": "7.13.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/guzzle.git",
-                "reference": "a4decaa9745dc567467970e43f183e260cfa51fd"
+                "reference": "55901a76dfd2006a0cc012b9e3c5b487f796478d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/a4decaa9745dc567467970e43f183e260cfa51fd",
-                "reference": "a4decaa9745dc567467970e43f183e260cfa51fd",
+                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/55901a76dfd2006a0cc012b9e3c5b487f796478d",
+                "reference": "55901a76dfd2006a0cc012b9e3c5b487f796478d",
                 "shasum": ""
             },
             "require": {
@@ -1806,7 +1806,7 @@
             ],
             "support": {
                 "issues": "https://github.com/guzzle/guzzle/issues",
-                "source": "https://github.com/guzzle/guzzle/tree/7.13.0"
+                "source": "https://github.com/guzzle/guzzle/tree/7.13.1"
             },
             "funding": [
                 {
@@ -1822,7 +1822,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2026-06-29T13:31:06+00:00"
+            "time": "2026-06-29T20:14:18+00:00"
         },
         {
             "name": "guzzlehttp/promises",
@@ -2238,7 +2238,7 @@
         },
         {
             "name": "jeffersongoncalves/filament-erp",
-            "version": "3.x-dev",
+            "version": "3.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/jeffersongoncalves/filament-erp-suite.git",
@@ -2275,7 +2275,6 @@
                 "pestphp/pest": "^3.0|^4.0",
                 "pestphp/pest-plugin-laravel": "^3.0|^4.0"
             },
-            "default-branch": true,
             "type": "library",
             "extra": {
                 "laravel": {
@@ -2318,22 +2317,22 @@
         },
         {
             "name": "jeffersongoncalves/filament-erp-accounting",
-            "version": "3.x-dev",
+            "version": "3.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/jeffersongoncalves/filament-erp-accounting.git",
-                "reference": "9e6ff030e83100af0663b2f52bdedc3004694a11"
+                "reference": "3a16b87d5f8789ecd2997dddcaeab6a7c9b68284"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/jeffersongoncalves/filament-erp-accounting/zipball/9e6ff030e83100af0663b2f52bdedc3004694a11",
-                "reference": "9e6ff030e83100af0663b2f52bdedc3004694a11",
+                "url": "https://api.github.com/repos/jeffersongoncalves/filament-erp-accounting/zipball/3a16b87d5f8789ecd2997dddcaeab6a7c9b68284",
+                "reference": "3a16b87d5f8789ecd2997dddcaeab6a7c9b68284",
                 "shasum": ""
             },
             "require": {
                 "filament/filament": "^5.3",
                 "jeffersongoncalves/filament-erp-core": "self.version",
-                "jeffersongoncalves/laravel-erp-accounting": "dev-main",
+                "jeffersongoncalves/laravel-erp-accounting": "^1.0",
                 "php": "^8.2",
                 "spatie/laravel-package-tools": "^1.14.0"
             },
@@ -2344,7 +2343,6 @@
                 "pestphp/pest": "^3.0|^4.0",
                 "pestphp/pest-plugin-laravel": "^3.0|^4.0"
             },
-            "default-branch": true,
             "type": "library",
             "extra": {
                 "laravel": {
@@ -2383,26 +2381,26 @@
                 "issues": "https://github.com/jeffersongoncalves/filament-erp/issues",
                 "source": "https://github.com/jeffersongoncalves/filament-erp"
             },
-            "time": "2026-06-29T17:21:54+00:00"
+            "time": "2026-06-29T21:57:31+00:00"
         },
         {
             "name": "jeffersongoncalves/filament-erp-assets",
-            "version": "3.x-dev",
+            "version": "3.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/jeffersongoncalves/filament-erp-assets.git",
-                "reference": "2ce328fa1873e76bc25e83ddab7f7e47c0cc2db9"
+                "reference": "2d4b23ee3ff108a260955cfcbbae6cddabdf02c4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/jeffersongoncalves/filament-erp-assets/zipball/2ce328fa1873e76bc25e83ddab7f7e47c0cc2db9",
-                "reference": "2ce328fa1873e76bc25e83ddab7f7e47c0cc2db9",
+                "url": "https://api.github.com/repos/jeffersongoncalves/filament-erp-assets/zipball/2d4b23ee3ff108a260955cfcbbae6cddabdf02c4",
+                "reference": "2d4b23ee3ff108a260955cfcbbae6cddabdf02c4",
                 "shasum": ""
             },
             "require": {
                 "filament/filament": "^5.3",
                 "jeffersongoncalves/filament-erp-core": "self.version",
-                "jeffersongoncalves/laravel-erp-assets": "dev-main",
+                "jeffersongoncalves/laravel-erp-assets": "^1.0",
                 "php": "^8.2",
                 "spatie/laravel-package-tools": "^1.14.0"
             },
@@ -2413,7 +2411,6 @@
                 "pestphp/pest": "^3.0|^4.0",
                 "pestphp/pest-plugin-laravel": "^3.0|^4.0"
             },
-            "default-branch": true,
             "type": "library",
             "extra": {
                 "laravel": {
@@ -2452,26 +2449,26 @@
                 "issues": "https://github.com/jeffersongoncalves/filament-erp/issues",
                 "source": "https://github.com/jeffersongoncalves/filament-erp"
             },
-            "time": "2026-06-29T17:22:03+00:00"
+            "time": "2026-06-29T21:57:30+00:00"
         },
         {
             "name": "jeffersongoncalves/filament-erp-buying",
-            "version": "3.x-dev",
+            "version": "3.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/jeffersongoncalves/filament-erp-buying.git",
-                "reference": "6a84c05f02f6940bccbd611e3b44077380df0219"
+                "reference": "804aae6213c8ff2712046b21d8008a08b04228e5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/jeffersongoncalves/filament-erp-buying/zipball/6a84c05f02f6940bccbd611e3b44077380df0219",
-                "reference": "6a84c05f02f6940bccbd611e3b44077380df0219",
+                "url": "https://api.github.com/repos/jeffersongoncalves/filament-erp-buying/zipball/804aae6213c8ff2712046b21d8008a08b04228e5",
+                "reference": "804aae6213c8ff2712046b21d8008a08b04228e5",
                 "shasum": ""
             },
             "require": {
                 "filament/filament": "^5.3",
                 "jeffersongoncalves/filament-erp-core": "self.version",
-                "jeffersongoncalves/laravel-erp-buying": "dev-main",
+                "jeffersongoncalves/laravel-erp-buying": "^1.0",
                 "php": "^8.2",
                 "spatie/laravel-package-tools": "^1.14.0"
             },
@@ -2482,7 +2479,6 @@
                 "pestphp/pest": "^3.0|^4.0",
                 "pestphp/pest-plugin-laravel": "^3.0|^4.0"
             },
-            "default-branch": true,
             "type": "library",
             "extra": {
                 "laravel": {
@@ -2522,25 +2518,25 @@
                 "issues": "https://github.com/jeffersongoncalves/filament-erp/issues",
                 "source": "https://github.com/jeffersongoncalves/filament-erp"
             },
-            "time": "2026-06-29T17:21:55+00:00"
+            "time": "2026-06-29T21:57:33+00:00"
         },
         {
             "name": "jeffersongoncalves/filament-erp-core",
-            "version": "3.x-dev",
+            "version": "3.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/jeffersongoncalves/filament-erp-core.git",
-                "reference": "56c79e577c3ec43192603f283f423894c28c022c"
+                "reference": "730614df5b6e672a521309a192ebaccc41884e3e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/jeffersongoncalves/filament-erp-core/zipball/56c79e577c3ec43192603f283f423894c28c022c",
-                "reference": "56c79e577c3ec43192603f283f423894c28c022c",
+                "url": "https://api.github.com/repos/jeffersongoncalves/filament-erp-core/zipball/730614df5b6e672a521309a192ebaccc41884e3e",
+                "reference": "730614df5b6e672a521309a192ebaccc41884e3e",
                 "shasum": ""
             },
             "require": {
                 "filament/filament": "^5.3",
-                "jeffersongoncalves/laravel-erp-core": "dev-main",
+                "jeffersongoncalves/laravel-erp-core": "^1.0",
                 "php": "^8.2",
                 "spatie/laravel-package-tools": "^1.14.0"
             },
@@ -2551,7 +2547,6 @@
                 "pestphp/pest": "^3.0|^4.0",
                 "pestphp/pest-plugin-laravel": "^3.0|^4.0"
             },
-            "default-branch": true,
             "type": "library",
             "extra": {
                 "laravel": {
@@ -2590,26 +2585,26 @@
                 "issues": "https://github.com/jeffersongoncalves/filament-erp/issues",
                 "source": "https://github.com/jeffersongoncalves/filament-erp"
             },
-            "time": "2026-06-29T16:51:12+00:00"
+            "time": "2026-06-29T21:57:32+00:00"
         },
         {
             "name": "jeffersongoncalves/filament-erp-crm",
-            "version": "3.x-dev",
+            "version": "3.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/jeffersongoncalves/filament-erp-crm.git",
-                "reference": "7d2d9e81a926462e389ee86e9b0aa7ad473dbb2a"
+                "reference": "4f8a8adf7c275166495d36386cd2e398ecf58792"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/jeffersongoncalves/filament-erp-crm/zipball/7d2d9e81a926462e389ee86e9b0aa7ad473dbb2a",
-                "reference": "7d2d9e81a926462e389ee86e9b0aa7ad473dbb2a",
+                "url": "https://api.github.com/repos/jeffersongoncalves/filament-erp-crm/zipball/4f8a8adf7c275166495d36386cd2e398ecf58792",
+                "reference": "4f8a8adf7c275166495d36386cd2e398ecf58792",
                 "shasum": ""
             },
             "require": {
                 "filament/filament": "^5.3",
                 "jeffersongoncalves/filament-erp-core": "self.version",
-                "jeffersongoncalves/laravel-erp-crm": "dev-main",
+                "jeffersongoncalves/laravel-erp-crm": "^1.0",
                 "php": "^8.2",
                 "spatie/laravel-package-tools": "^1.14.0"
             },
@@ -2620,7 +2615,6 @@
                 "pestphp/pest": "^3.0|^4.0",
                 "pestphp/pest-plugin-laravel": "^3.0|^4.0"
             },
-            "default-branch": true,
             "type": "library",
             "extra": {
                 "laravel": {
@@ -2660,26 +2654,26 @@
                 "issues": "https://github.com/jeffersongoncalves/filament-erp/issues",
                 "source": "https://github.com/jeffersongoncalves/filament-erp"
             },
-            "time": "2026-06-29T17:21:54+00:00"
+            "time": "2026-06-29T21:57:31+00:00"
         },
         {
             "name": "jeffersongoncalves/filament-erp-maintenance",
-            "version": "3.x-dev",
+            "version": "3.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/jeffersongoncalves/filament-erp-maintenance.git",
-                "reference": "70ba76dbeb4c9af7ffe340de832a4207823802fc"
+                "reference": "f21137a644196f2f58e506c09fef010cc96ac579"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/jeffersongoncalves/filament-erp-maintenance/zipball/70ba76dbeb4c9af7ffe340de832a4207823802fc",
-                "reference": "70ba76dbeb4c9af7ffe340de832a4207823802fc",
+                "url": "https://api.github.com/repos/jeffersongoncalves/filament-erp-maintenance/zipball/f21137a644196f2f58e506c09fef010cc96ac579",
+                "reference": "f21137a644196f2f58e506c09fef010cc96ac579",
                 "shasum": ""
             },
             "require": {
                 "filament/filament": "^5.3",
                 "jeffersongoncalves/filament-erp-core": "self.version",
-                "jeffersongoncalves/laravel-erp-maintenance": "dev-main",
+                "jeffersongoncalves/laravel-erp-maintenance": "^1.0",
                 "php": "^8.2",
                 "spatie/laravel-package-tools": "^1.14.0"
             },
@@ -2690,7 +2684,6 @@
                 "pestphp/pest": "^3.0|^4.0",
                 "pestphp/pest-plugin-laravel": "^3.0|^4.0"
             },
-            "default-branch": true,
             "type": "library",
             "extra": {
                 "laravel": {
@@ -2729,26 +2722,26 @@
                 "issues": "https://github.com/jeffersongoncalves/filament-erp/issues",
                 "source": "https://github.com/jeffersongoncalves/filament-erp"
             },
-            "time": "2026-06-29T17:22:01+00:00"
+            "time": "2026-06-29T21:57:34+00:00"
         },
         {
             "name": "jeffersongoncalves/filament-erp-manufacturing",
-            "version": "3.x-dev",
+            "version": "3.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/jeffersongoncalves/filament-erp-manufacturing.git",
-                "reference": "5a806542e74df5d293f11d2a8bff753e21749cc1"
+                "reference": "bcb5be5254589e38e71ab7c50084ab872123d4d0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/jeffersongoncalves/filament-erp-manufacturing/zipball/5a806542e74df5d293f11d2a8bff753e21749cc1",
-                "reference": "5a806542e74df5d293f11d2a8bff753e21749cc1",
+                "url": "https://api.github.com/repos/jeffersongoncalves/filament-erp-manufacturing/zipball/bcb5be5254589e38e71ab7c50084ab872123d4d0",
+                "reference": "bcb5be5254589e38e71ab7c50084ab872123d4d0",
                 "shasum": ""
             },
             "require": {
                 "filament/filament": "^5.3",
                 "jeffersongoncalves/filament-erp-core": "self.version",
-                "jeffersongoncalves/laravel-erp-manufacturing": "dev-main",
+                "jeffersongoncalves/laravel-erp-manufacturing": "^1.0",
                 "php": "^8.2",
                 "spatie/laravel-package-tools": "^1.14.0"
             },
@@ -2759,7 +2752,6 @@
                 "pestphp/pest": "^3.0|^4.0",
                 "pestphp/pest-plugin-laravel": "^3.0|^4.0"
             },
-            "default-branch": true,
             "type": "library",
             "extra": {
                 "laravel": {
@@ -2799,26 +2791,26 @@
                 "issues": "https://github.com/jeffersongoncalves/filament-erp/issues",
                 "source": "https://github.com/jeffersongoncalves/filament-erp"
             },
-            "time": "2026-06-29T17:21:56+00:00"
+            "time": "2026-06-29T21:57:33+00:00"
         },
         {
             "name": "jeffersongoncalves/filament-erp-projects",
-            "version": "3.x-dev",
+            "version": "3.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/jeffersongoncalves/filament-erp-projects.git",
-                "reference": "e10e329ca8d04f36fdeeaf53ef1696e95c7ad4f5"
+                "reference": "720646799e174824561edcd88f37b73e645706f3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/jeffersongoncalves/filament-erp-projects/zipball/e10e329ca8d04f36fdeeaf53ef1696e95c7ad4f5",
-                "reference": "e10e329ca8d04f36fdeeaf53ef1696e95c7ad4f5",
+                "url": "https://api.github.com/repos/jeffersongoncalves/filament-erp-projects/zipball/720646799e174824561edcd88f37b73e645706f3",
+                "reference": "720646799e174824561edcd88f37b73e645706f3",
                 "shasum": ""
             },
             "require": {
                 "filament/filament": "^5.3",
                 "jeffersongoncalves/filament-erp-core": "self.version",
-                "jeffersongoncalves/laravel-erp-projects": "dev-main",
+                "jeffersongoncalves/laravel-erp-projects": "^1.0",
                 "php": "^8.2",
                 "spatie/laravel-package-tools": "^1.14.0"
             },
@@ -2829,7 +2821,6 @@
                 "pestphp/pest": "^3.0|^4.0",
                 "pestphp/pest-plugin-laravel": "^3.0|^4.0"
             },
-            "default-branch": true,
             "type": "library",
             "extra": {
                 "laravel": {
@@ -2868,26 +2859,26 @@
                 "issues": "https://github.com/jeffersongoncalves/filament-erp/issues",
                 "source": "https://github.com/jeffersongoncalves/filament-erp"
             },
-            "time": "2026-06-29T17:21:58+00:00"
+            "time": "2026-06-29T21:57:30+00:00"
         },
         {
             "name": "jeffersongoncalves/filament-erp-quality",
-            "version": "3.x-dev",
+            "version": "3.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/jeffersongoncalves/filament-erp-quality.git",
-                "reference": "2ab9957e73c3961ec0cdb2e27b6323bc2fc6e812"
+                "reference": "76b81f33df0ffd4b613b088e6e931817a75971e5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/jeffersongoncalves/filament-erp-quality/zipball/2ab9957e73c3961ec0cdb2e27b6323bc2fc6e812",
-                "reference": "2ab9957e73c3961ec0cdb2e27b6323bc2fc6e812",
+                "url": "https://api.github.com/repos/jeffersongoncalves/filament-erp-quality/zipball/76b81f33df0ffd4b613b088e6e931817a75971e5",
+                "reference": "76b81f33df0ffd4b613b088e6e931817a75971e5",
                 "shasum": ""
             },
             "require": {
                 "filament/filament": "^5.3",
                 "jeffersongoncalves/filament-erp-core": "self.version",
-                "jeffersongoncalves/laravel-erp-quality": "dev-main",
+                "jeffersongoncalves/laravel-erp-quality": "^1.0",
                 "php": "^8.2",
                 "spatie/laravel-package-tools": "^1.14.0"
             },
@@ -2898,7 +2889,6 @@
                 "pestphp/pest": "^3.0|^4.0",
                 "pestphp/pest-plugin-laravel": "^3.0|^4.0"
             },
-            "default-branch": true,
             "type": "library",
             "extra": {
                 "laravel": {
@@ -2938,26 +2928,26 @@
                 "issues": "https://github.com/jeffersongoncalves/filament-erp/issues",
                 "source": "https://github.com/jeffersongoncalves/filament-erp"
             },
-            "time": "2026-06-29T17:21:59+00:00"
+            "time": "2026-06-29T21:57:32+00:00"
         },
         {
             "name": "jeffersongoncalves/filament-erp-selling",
-            "version": "3.x-dev",
+            "version": "3.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/jeffersongoncalves/filament-erp-selling.git",
-                "reference": "479305da3834fa2a9235fef90b00939b101f1ec8"
+                "reference": "32be73e13ab529d722f5dd93b901b83cccc1a8be"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/jeffersongoncalves/filament-erp-selling/zipball/479305da3834fa2a9235fef90b00939b101f1ec8",
-                "reference": "479305da3834fa2a9235fef90b00939b101f1ec8",
+                "url": "https://api.github.com/repos/jeffersongoncalves/filament-erp-selling/zipball/32be73e13ab529d722f5dd93b901b83cccc1a8be",
+                "reference": "32be73e13ab529d722f5dd93b901b83cccc1a8be",
                 "shasum": ""
             },
             "require": {
                 "filament/filament": "^5.3",
                 "jeffersongoncalves/filament-erp-core": "self.version",
-                "jeffersongoncalves/laravel-erp-selling": "dev-main",
+                "jeffersongoncalves/laravel-erp-selling": "^1.0",
                 "php": "^8.2",
                 "spatie/laravel-package-tools": "^1.14.0"
             },
@@ -2968,7 +2958,6 @@
                 "pestphp/pest": "^3.0|^4.0",
                 "pestphp/pest-plugin-laravel": "^3.0|^4.0"
             },
-            "default-branch": true,
             "type": "library",
             "extra": {
                 "laravel": {
@@ -3007,26 +2996,26 @@
                 "issues": "https://github.com/jeffersongoncalves/filament-erp/issues",
                 "source": "https://github.com/jeffersongoncalves/filament-erp"
             },
-            "time": "2026-06-29T17:21:56+00:00"
+            "time": "2026-06-29T21:57:35+00:00"
         },
         {
             "name": "jeffersongoncalves/filament-erp-stock",
-            "version": "3.x-dev",
+            "version": "3.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/jeffersongoncalves/filament-erp-stock.git",
-                "reference": "2501b9e62a74984826f7fe01e434d8bf3d8a83ea"
+                "reference": "b70a0d0aac74cc9d217ac1eebd211bfa1b4c6bc2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/jeffersongoncalves/filament-erp-stock/zipball/2501b9e62a74984826f7fe01e434d8bf3d8a83ea",
-                "reference": "2501b9e62a74984826f7fe01e434d8bf3d8a83ea",
+                "url": "https://api.github.com/repos/jeffersongoncalves/filament-erp-stock/zipball/b70a0d0aac74cc9d217ac1eebd211bfa1b4c6bc2",
+                "reference": "b70a0d0aac74cc9d217ac1eebd211bfa1b4c6bc2",
                 "shasum": ""
             },
             "require": {
                 "filament/filament": "^5.3",
                 "jeffersongoncalves/filament-erp-core": "self.version",
-                "jeffersongoncalves/laravel-erp-stock": "dev-main",
+                "jeffersongoncalves/laravel-erp-stock": "^1.0",
                 "php": "^8.2",
                 "spatie/laravel-package-tools": "^1.14.0"
             },
@@ -3037,7 +3026,6 @@
                 "pestphp/pest": "^3.0|^4.0",
                 "pestphp/pest-plugin-laravel": "^3.0|^4.0"
             },
-            "default-branch": true,
             "type": "library",
             "extra": {
                 "laravel": {
@@ -3076,26 +3064,26 @@
                 "issues": "https://github.com/jeffersongoncalves/filament-erp/issues",
                 "source": "https://github.com/jeffersongoncalves/filament-erp"
             },
-            "time": "2026-06-29T17:21:54+00:00"
+            "time": "2026-06-29T21:57:33+00:00"
         },
         {
             "name": "jeffersongoncalves/filament-erp-subcontracting",
-            "version": "3.x-dev",
+            "version": "3.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/jeffersongoncalves/filament-erp-subcontracting.git",
-                "reference": "5d3479a4aeadd52563b1258fef2c87e698f697a3"
+                "reference": "a9758d9fca19f86eda1b78f5f34c039814f5a8ad"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/jeffersongoncalves/filament-erp-subcontracting/zipball/5d3479a4aeadd52563b1258fef2c87e698f697a3",
-                "reference": "5d3479a4aeadd52563b1258fef2c87e698f697a3",
+                "url": "https://api.github.com/repos/jeffersongoncalves/filament-erp-subcontracting/zipball/a9758d9fca19f86eda1b78f5f34c039814f5a8ad",
+                "reference": "a9758d9fca19f86eda1b78f5f34c039814f5a8ad",
                 "shasum": ""
             },
             "require": {
                 "filament/filament": "^5.3",
                 "jeffersongoncalves/filament-erp-core": "self.version",
-                "jeffersongoncalves/laravel-erp-subcontracting": "dev-main",
+                "jeffersongoncalves/laravel-erp-subcontracting": "^1.0",
                 "php": "^8.2",
                 "spatie/laravel-package-tools": "^1.14.0"
             },
@@ -3106,7 +3094,6 @@
                 "pestphp/pest": "^3.0|^4.0",
                 "pestphp/pest-plugin-laravel": "^3.0|^4.0"
             },
-            "default-branch": true,
             "type": "library",
             "extra": {
                 "laravel": {
@@ -3146,26 +3133,26 @@
                 "issues": "https://github.com/jeffersongoncalves/filament-erp/issues",
                 "source": "https://github.com/jeffersongoncalves/filament-erp"
             },
-            "time": "2026-06-29T17:21:57+00:00"
+            "time": "2026-06-29T21:57:32+00:00"
         },
         {
             "name": "jeffersongoncalves/filament-erp-support",
-            "version": "3.x-dev",
+            "version": "3.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/jeffersongoncalves/filament-erp-support.git",
-                "reference": "7428e4261818f26a154e491daba229272ccd45aa"
+                "reference": "987d099390d8007fbbc343d86d23ce40e8375598"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/jeffersongoncalves/filament-erp-support/zipball/7428e4261818f26a154e491daba229272ccd45aa",
-                "reference": "7428e4261818f26a154e491daba229272ccd45aa",
+                "url": "https://api.github.com/repos/jeffersongoncalves/filament-erp-support/zipball/987d099390d8007fbbc343d86d23ce40e8375598",
+                "reference": "987d099390d8007fbbc343d86d23ce40e8375598",
                 "shasum": ""
             },
             "require": {
                 "filament/filament": "^5.3",
                 "jeffersongoncalves/filament-erp-core": "self.version",
-                "jeffersongoncalves/laravel-erp-support": "dev-main",
+                "jeffersongoncalves/laravel-erp-support": "^1.0",
                 "php": "^8.2",
                 "spatie/laravel-package-tools": "^1.14.0"
             },
@@ -3176,7 +3163,6 @@
                 "pestphp/pest": "^3.0|^4.0",
                 "pestphp/pest-plugin-laravel": "^3.0|^4.0"
             },
-            "default-branch": true,
             "type": "library",
             "extra": {
                 "laravel": {
@@ -3216,7 +3202,7 @@
                 "issues": "https://github.com/jeffersongoncalves/filament-erp/issues",
                 "source": "https://github.com/jeffersongoncalves/filament-erp"
             },
-            "time": "2026-06-29T17:21:57+00:00"
+            "time": "2026-06-29T21:57:31+00:00"
         },
         {
             "name": "jeffersongoncalves/filament-logo",
@@ -3494,16 +3480,16 @@
         },
         {
             "name": "jeffersongoncalves/laravel-erp-accounting",
-            "version": "dev-main",
+            "version": "1.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/jeffersongoncalves/laravel-erp-accounting.git",
-                "reference": "20fb0575daa15d1c68f3f1c63c5f0284de08a88d"
+                "reference": "b0adc57d21ebbcbdd83db25d7c7ae4062ab21810"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/jeffersongoncalves/laravel-erp-accounting/zipball/20fb0575daa15d1c68f3f1c63c5f0284de08a88d",
-                "reference": "20fb0575daa15d1c68f3f1c63c5f0284de08a88d",
+                "url": "https://api.github.com/repos/jeffersongoncalves/laravel-erp-accounting/zipball/b0adc57d21ebbcbdd83db25d7c7ae4062ab21810",
+                "reference": "b0adc57d21ebbcbdd83db25d7c7ae4062ab21810",
                 "shasum": ""
             },
             "require": {
@@ -3511,7 +3497,7 @@
                 "illuminate/database": "^11.0|^12.0|^13.0",
                 "illuminate/events": "^11.0|^12.0|^13.0",
                 "illuminate/support": "^11.0|^12.0|^13.0",
-                "jeffersongoncalves/laravel-erp-core": "dev-main",
+                "jeffersongoncalves/laravel-erp-core": "self.version",
                 "php": "^8.2",
                 "spatie/laravel-package-tools": "^1.15"
             },
@@ -3523,7 +3509,6 @@
                 "pestphp/pest": "^3.0|^4.0",
                 "pestphp/pest-plugin-laravel": "^3.0|^4.0"
             },
-            "default-branch": true,
             "type": "library",
             "extra": {
                 "laravel": {
@@ -3549,7 +3534,7 @@
                 }
             ],
             "description": "ERP accounting — chart of accounts, general ledger, journal/payment entries and invoices for the Laravel ERP ecosystem",
-            "homepage": "https://github.com/jeffersongoncalves/laravel-erp-accounting",
+            "homepage": "https://github.com/jeffersongoncalves/laravel-erp",
             "keywords": [
                 "Accounting",
                 "ERP",
@@ -3559,19 +3544,14 @@
                 "submittable"
             ],
             "support": {
-                "source": "https://github.com/jeffersongoncalves/laravel-erp-accounting/tree/main"
+                "issues": "https://github.com/jeffersongoncalves/laravel-erp/issues",
+                "source": "https://github.com/jeffersongoncalves/laravel-erp"
             },
-            "funding": [
-                {
-                    "url": "https://github.com/jeffersongoncalves",
-                    "type": "github"
-                }
-            ],
-            "time": "2026-06-29T13:46:54+00:00"
+            "time": "2026-06-29T17:21:36+00:00"
         },
         {
             "name": "jeffersongoncalves/laravel-erp-assets",
-            "version": "dev-main",
+            "version": "1.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/jeffersongoncalves/laravel-erp-assets.git",
@@ -3601,7 +3581,6 @@
                 "pestphp/pest": "^3.0|^4.0",
                 "pestphp/pest-plugin-laravel": "^3.0|^4.0"
             },
-            "default-branch": true,
             "type": "library",
             "extra": {
                 "laravel": {
@@ -3644,7 +3623,7 @@
         },
         {
             "name": "jeffersongoncalves/laravel-erp-buying",
-            "version": "dev-main",
+            "version": "1.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/jeffersongoncalves/laravel-erp-buying.git",
@@ -3675,7 +3654,6 @@
                 "pestphp/pest": "^3.0|^4.0",
                 "pestphp/pest-plugin-laravel": "^3.0|^4.0"
             },
-            "default-branch": true,
             "type": "library",
             "extra": {
                 "laravel": {
@@ -3718,7 +3696,7 @@
         },
         {
             "name": "jeffersongoncalves/laravel-erp-core",
-            "version": "dev-main",
+            "version": "1.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/jeffersongoncalves/laravel-erp-core.git",
@@ -3746,7 +3724,6 @@
                 "pestphp/pest": "^3.0|^4.0",
                 "pestphp/pest-plugin-laravel": "^3.0|^4.0"
             },
-            "default-branch": true,
             "type": "library",
             "extra": {
                 "laravel": {
@@ -3789,7 +3766,7 @@
         },
         {
             "name": "jeffersongoncalves/laravel-erp-crm",
-            "version": "dev-main",
+            "version": "1.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/jeffersongoncalves/laravel-erp-crm.git",
@@ -3819,7 +3796,6 @@
                 "pestphp/pest": "^3.0|^4.0",
                 "pestphp/pest-plugin-laravel": "^3.0|^4.0"
             },
-            "default-branch": true,
             "type": "library",
             "extra": {
                 "laravel": {
@@ -3863,7 +3839,7 @@
         },
         {
             "name": "jeffersongoncalves/laravel-erp-maintenance",
-            "version": "dev-main",
+            "version": "1.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/jeffersongoncalves/laravel-erp-maintenance.git",
@@ -3892,7 +3868,6 @@
                 "pestphp/pest": "^3.0|^4.0",
                 "pestphp/pest-plugin-laravel": "^3.0|^4.0"
             },
-            "default-branch": true,
             "type": "library",
             "extra": {
                 "laravel": {
@@ -3934,7 +3909,7 @@
         },
         {
             "name": "jeffersongoncalves/laravel-erp-manufacturing",
-            "version": "dev-main",
+            "version": "1.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/jeffersongoncalves/laravel-erp-manufacturing.git",
@@ -3965,7 +3940,6 @@
                 "pestphp/pest": "^3.0|^4.0",
                 "pestphp/pest-plugin-laravel": "^3.0|^4.0"
             },
-            "default-branch": true,
             "type": "library",
             "extra": {
                 "laravel": {
@@ -4009,7 +3983,7 @@
         },
         {
             "name": "jeffersongoncalves/laravel-erp-projects",
-            "version": "dev-main",
+            "version": "1.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/jeffersongoncalves/laravel-erp-projects.git",
@@ -4039,7 +4013,6 @@
                 "pestphp/pest": "^3.0|^4.0",
                 "pestphp/pest-plugin-laravel": "^3.0|^4.0"
             },
-            "default-branch": true,
             "type": "library",
             "extra": {
                 "laravel": {
@@ -4083,7 +4056,7 @@
         },
         {
             "name": "jeffersongoncalves/laravel-erp-quality",
-            "version": "dev-main",
+            "version": "1.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/jeffersongoncalves/laravel-erp-quality.git",
@@ -4112,7 +4085,6 @@
                 "pestphp/pest": "^3.0|^4.0",
                 "pestphp/pest-plugin-laravel": "^3.0|^4.0"
             },
-            "default-branch": true,
             "type": "library",
             "extra": {
                 "laravel": {
@@ -4156,7 +4128,7 @@
         },
         {
             "name": "jeffersongoncalves/laravel-erp-selling",
-            "version": "dev-main",
+            "version": "1.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/jeffersongoncalves/laravel-erp-selling.git",
@@ -4187,7 +4159,6 @@
                 "pestphp/pest": "^3.0|^4.0",
                 "pestphp/pest-plugin-laravel": "^3.0|^4.0"
             },
-            "default-branch": true,
             "type": "library",
             "extra": {
                 "laravel": {
@@ -4232,7 +4203,7 @@
         },
         {
             "name": "jeffersongoncalves/laravel-erp-stock",
-            "version": "dev-main",
+            "version": "1.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/jeffersongoncalves/laravel-erp-stock.git",
@@ -4262,7 +4233,6 @@
                 "pestphp/pest": "^3.0|^4.0",
                 "pestphp/pest-plugin-laravel": "^3.0|^4.0"
             },
-            "default-branch": true,
             "type": "library",
             "extra": {
                 "laravel": {
@@ -4306,7 +4276,7 @@
         },
         {
             "name": "jeffersongoncalves/laravel-erp-subcontracting",
-            "version": "dev-main",
+            "version": "1.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/jeffersongoncalves/laravel-erp-subcontracting.git",
@@ -4339,7 +4309,6 @@
                 "pestphp/pest": "^3.0|^4.0",
                 "pestphp/pest-plugin-laravel": "^3.0|^4.0"
             },
-            "default-branch": true,
             "type": "library",
             "extra": {
                 "laravel": {
@@ -4382,7 +4351,7 @@
         },
         {
             "name": "jeffersongoncalves/laravel-erp-support",
-            "version": "dev-main",
+            "version": "1.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/jeffersongoncalves/laravel-erp-support.git",
@@ -4411,7 +4380,6 @@
                 "pestphp/pest": "^3.0|^4.0",
                 "pestphp/pest-plugin-laravel": "^3.0|^4.0"
             },
-            "default-branch": true,
             "type": "library",
             "extra": {
                 "laravel": {
@@ -15127,9 +15095,7 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": {
-        "jeffersongoncalves/filament-erp": 20
-    },
+    "stability-flags": {},
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
