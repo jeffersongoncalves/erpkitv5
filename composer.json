@@ -88,7 +88,8 @@
             "@php artisan vendor:publish --tag=erp-projects-migrations --ansi",
             "@php artisan vendor:publish --tag=erp-support-migrations --ansi",
             "@php artisan vendor:publish --tag=erp-quality-migrations --ansi",
-            "@php artisan vendor:publish --tag=erp-maintenance-migrations --ansi"
+            "@php artisan vendor:publish --tag=erp-maintenance-migrations --ansi",
+            "@php artisan vendor:publish --tag=erp-hr-migrations --ansi"
         ],
         "ide-helper": [
             "@php artisan ide-helper:generate -q",
