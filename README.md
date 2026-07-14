@@ -55,6 +55,7 @@ Each guard has its own password-reset broker.
 git clone https://github.com/jeffersongoncalves/erpkitv5.git
 cd erpkitv5
 composer install
+pnpm install
 cp .env.example .env
 php artisan key:generate
 touch database/database.sqlite
@@ -82,6 +83,7 @@ composer publish-erp
 
 php artisan migrate
 php artisan db:seed
+pnpm run build
 php artisan serve
 ```
 
